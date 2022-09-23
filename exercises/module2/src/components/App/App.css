@@ -1,0 +1,11 @@
+body{
+    margin: 50px;
+    margin-left: 80vh;
+    margin-right: 80vh;
+}
+body div{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 22px;
+    border-radius: 22px;
+}
