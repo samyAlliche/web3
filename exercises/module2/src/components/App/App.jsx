@@ -1,20 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "components/App/App.css";
 import Display from "components/Display/Display";
 import Button from "components/Button/Button";
 
 const App = () => {
 
-  const [counter, setCounter] = useState(0);
-
-  const changeCount = (delta) => {
-    setCounter(counter + parseInt(delta));
-  };
+  const [counter, setCounter] = useState(JSON.parse(localStorage.getItem("counter")));
 
   const handleClick = (e) => {
     e.preventDefault();
-    changeCount(parseInt(e.target.dataset.delta))
+    setCounter(counter + parseInt(e.target.dataset.delta));
+    //localStorage.setItem("counter", JSON.stringify(counter))
 }
+//?
+useEffect(() => {
+  localStorage.setItem("counter", JSON.stringify(counter));
+}, [counter]);
 
   return (
     <div>
