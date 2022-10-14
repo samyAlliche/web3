@@ -1,0 +1,20 @@
+.btn{
+    padding: 8px;
+    background-color: indigo;
+    border-radius:8px;
+    border-color: transparent;
+    margin: 2px;
+    width: 32%;
+    color: white;
+    transition: background-color 0.25s;
+}
+
+@media (max-width:600px){
+    .btn{
+        margin: 0;
+    }
+    
+}
+.btn:hover{
+    background-color: rgb(139, 70, 189);
+}
